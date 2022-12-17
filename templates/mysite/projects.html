@@ -1,0 +1,25 @@
+{%extends 'mysite/base.html'%}
+
+{%block content%}
+<section id="feature" class="section-p1">
+{% for project in project_objects %}
+<a href ="/{{project.id}}">
+    <div class="fe-box">
+        <h4>{{project.title}}</h4>
+        <h6>Category: {{project.category}}</h6>
+        <p>Summary: {{project.summary}}</p>
+    </div>
+</a>
+{%endfor%}
+
+<div>
+    {%if project_objects.has_previous%}
+        <a class="btn-b" href="?page={{project_objects.previous_page_number}}">Previous</a>           
+    {%endif%}
+    {%if project_objects.has_next%}
+        <a class="btn-b" href="?page={{project_objects.next_page_number}}">Next</a>           
+    {%endif%}
+</div>
+
+
+{%endblock%}

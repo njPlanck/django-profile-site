@@ -1,0 +1,64 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="..\static\stylesheet.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><i>NjPlanck</i><span>Codes...</span></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="{%url 'index'%}">Home</a></li> 
+                <li><a href="{%url 'profilepage'%}">My Profile</a></li>
+                <li><a href="{%url 'projects'%}">My Portfolio</a></li>
+                <li><a href="{%url 'contact'%}">Contact Me</a></li>
+            </ul>
+        </div>
+        <div>
+            <form>
+                <input class="search" type="search" name="project_name" placeholder="name of projects">
+                <button class="btn-btn" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div id="container">
+        <div id="main">
+            {%block content%}
+            {%endblock%}
+        </div>
+
+    </div>
+    <footer id="footer">
+        <h5 class="footer-badge">NjPlanck<span>Codes  </span><i class="fa-solid fa-copyright"></i></h6>
+        <p class="footer-badge" id="footer-paragraph">This is a site I designed for my projects.</p>
+        <div class = "foot-tags">
+            <ul class="foot-menu">
+                <li><a href="{%url 'projects'%}">My Projects</a></li>
+                <li><a href="{%url 'profilepage'%}">My Profile</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://github.com/njplanck"><i class="fa-brands fa-github"></i>GitHub</a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+                <li><a href="njokuchinasa82@gmail.com"><i class="fa-solid fa-envelope"></i>@mail<a/></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="..\static\script.js"></script>
+</body>
+
+</html>
